@@ -6,7 +6,7 @@ use App\Http\Controllers\RestoController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::post('/restos', [RestoController::class, 'index']);
+Route::get('/restos', [RestoController::class, 'index']);
 Route::post('/restos/tambah-data', [RestoController::class, 'store']);
 Route::get('/generate-token', [RestoController::class, 'createToken']);
 Route::get('/restos/{id}', [RestoController::class, 'show']);
